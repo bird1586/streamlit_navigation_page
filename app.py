@@ -45,6 +45,7 @@ try:
                 help="點擊以開啟短網址",
                 display_text="🔗"
             )
+        }
         
         # 在 Streamlit 中顯示 DataFrame
         st.dataframe(df, use_container_width=True)
