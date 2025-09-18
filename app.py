@@ -3,9 +3,7 @@ import pandas as pd
 import requests
 
 # 檢查 st.secrets 是否包含所需的 API 金鑰
-if "short_io_api" not in st.secrets:
-    st.error("找不到 API 金鑰。請在 .streamlit/secrets.toml 中設定 [short_io_api] 區塊。")
-    st.stop()
+
 
 # 從 secrets 中讀取 domain_id 和 authorization
 domain_id = st.secrets["domain_id"]
