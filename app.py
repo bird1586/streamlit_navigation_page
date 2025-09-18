@@ -48,7 +48,13 @@ try:
         }
         
         # 在 Streamlit 中顯示 DataFrame
-        st.dataframe(df, use_container_width=True)
+        st.data_editor(
+            df,
+            column_config=column_config,
+            hide_index=True,
+            use_container_width=True,
+            disabled=True  # 避免被編輯
+        )
     else:
         st.info("沒有找到任何短網址。")
 
