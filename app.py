@@ -39,6 +39,12 @@ try:
             })
         
         df = pd.DataFrame(extracted_data)
+        column_config = {
+            "Short URL": st.column_config.LinkColumn(
+                "Short URL",
+                help="點擊以開啟短網址",
+                display_text="🔗"
+            )
         
         # 在 Streamlit 中顯示 DataFrame
         st.dataframe(df, use_container_width=True)
