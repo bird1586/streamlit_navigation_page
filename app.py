@@ -33,6 +33,8 @@ try:
         # 創建一個 DataFrame
         extracted_data = []
         for link in links_list:
+            if link.get('title') in ('Navigate Page', 'n8n'):
+                continue
             extracted_data.append({
                 'Title': link.get('title', 'N/A'),
                 'Short URL': link.get('shortURL', 'N/A')
